@@ -1,0 +1,30 @@
+<div class="left-side" ng-hide="offline"
+  layout="column" layout-align="center center" flex-xs="grow" flex-gt-xs="40">
+	<a href="{{google_url}}" target="_blank" class="google-logo">
+		<img src="/assets/images/google.png">
+	</a>
+	<star-rating score="{{rating}}" stars="5"></star-rating>
+	<span class="extra">{{rating}} {{"component.gallery.rating.value" | translate}}</span>
+	<a href="https://search.google.com/local/writereview?placeid=ChIJc-CJWmX7oI8R21BnO3EeJXc" target="_blank" class="md-button md-raised input-submit md-primary">{{"component.gallery.rating.button" | translate}}</a>
+</div>
+
+<md-content class="right-side" ng-hide="offline">
+  <md-list>
+    <md-list-item class="md-3-line" ng-repeat="review in reviews | limitTo:2">
+      <img ng-src="{{review.profile_photo_url}}" class="md-avatar" alt="{{review.author_name}}">
+      <div class="md-list-item-text">
+        <h4>{{review.author_name}}</h4>
+        <star-rating score="{{review.rating}}" stars="5"></star-rating>
+        <p>{{review.text}}</p>
+      </div>
+      <md-divider md-inset ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>
+
+<!-- <div class="right-side" layout="column" layout-align="center center">
+	<img class="svg" src="/assets/images/smile.svg">
+	<h3>{{"component.gallery.hiring.title" | translate}}</h3>
+	<p>{{"component.gallery.hiring.p" | translate}}</p>
+	<a href="mailto:{{email}}?subject=SJOPintor%20Painter%20Application" class="">{{"component.gallery.hiring.button" | translate}}</a>
+</div> -->

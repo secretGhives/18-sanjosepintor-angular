@@ -1,0 +1,147 @@
+<md-content md-theme="dark" class="left-side"
+	layout="column" layout-align="start stretch"
+	layout-wrap flex-gt-xs="50" layout-padding>
+
+	<fieldset layout="column" layout-align="center stretch">
+		<legend>{{"component.calc.area.title" | translate}} 
+			<md-select ng-model="calc.unitsType" ng-change="calc.calculate()" aria-label="units">
+				<md-option value="feet">{{"component.calc.title.feet" | translate}}</md-option>
+				<md-option value="meters">{{"component.calc.title.meters" | translate}}</md-option>
+			</md-select>
+		</legend>
+
+		<section layout-xs="column" layout-gt-xs="row" layout-align="center stretch">
+			<md-input-container>
+				<label>{{"component.calc.area.length" | translate}} </label>
+				<input type="number" ng-model="calc.length" ng-change="calc.calculate()">
+			</md-input-container>
+
+			<md-input-container>
+				<label>{{"component.calc.area.width" | translate}} </label>
+				<input type="number" ng-model="calc.width" ng-change="calc.calculate()">
+			</md-input-container>
+
+			<md-input-container>
+				<label>{{"component.calc.area.height" | translate}} </label>
+				<input type="number" ng-model="calc.height" ng-change="calc.calculate()">
+			</md-input-container>
+		</section>
+
+		<md-input-container>
+			<label>{{"component.calc.area.surface_type" | translate}} </label>
+			<md-select ng-model="calc.surface" ng-change="calc.calculate()" aria-label="surface">
+				<md-option value="smooth">{{"component.calc.area.surface_type.smooth" | translate}}</md-option>
+				<md-option value="textured">{{"component.calc.area.surface_type.textured" | translate}}</md-option>
+				<md-option value="siding">{{"component.calc.area.surface_type.siding" | translate}}</md-option>
+			</md-select>
+		</md-input-container>
+	</fieldset>
+
+	<fieldset layout="column" layout-align="center stretch">
+		<legend>{{"component.calc.extra.title" | translate}}</legend>
+
+		<section layout-xs="column" layout-gt-xs="row" layout-align="center stretch">
+			<md-input-container flex="grow">
+				<label>{{"component.calc.extra.paint_quality" | translate}}</label>
+				<md-select ng-model="calc.quality" ng-change="calc.calculate()" aria-label="quality">
+					<md-option value="luxury">{{"component.calc.extra.paint_quality.luxury" | translate}}</md-option>
+					<md-option value="premium">{{"component.calc.extra.paint_quality.premium" | translate}}</md-option>
+					<md-option value="economy">{{"component.calc.extra.paint_quality.economy" | translate}}</md-option>
+				</md-select>
+			</md-input-container>
+
+			<md-input-container>
+				<md-checkbox ng-model="calc.ceiling" ng-change="calc.calculate()" aria-label="Ceiling">
+					{{"component.calc.extra.ceiling" | translate}}
+				</md-checkbox>
+			</md-input-container>
+		</section>
+
+		<section layout-xs="column" layout-gt-xs="row" layout-align="center stretch">
+			<md-input-container>
+				<label>{{"component.calc.extra.doors" | translate}}</label>
+				<input type="number" ng-model="calc.doors" ng-change="calc.calculate()">
+			</md-input-container>
+
+			<md-input-container>
+				<label>{{"component.calc.extra.windows" | translate}}</label>
+				<input type="number" ng-model="calc.windows" ng-change="calc.calculate()">
+			</md-input-container>
+
+			<md-input-container>
+				<label>{{"component.calc.extra.coats" | translate}}</label>
+				<md-select ng-model="calc.coats" ng-change="calc.calculate()" aria-label="coats">
+					<md-option value="1">1</md-option>
+					<md-option value="2">2</md-option>
+					<md-option value="3">3</md-option>
+				</md-select>
+			</md-input-container>
+		</section>
+	</fieldset>
+
+	<fieldset layout="column" layout-align="center stretch" class="center" ng-show="calc.area">
+		<legend>
+			<md-select ng-model="calc.weightType" ng-change="calc.calculate()" aria-label="weight type">
+				<md-option value="gallons">{{"component.calc.results.gallons" | translate}}</md-option>
+				<md-option value="liters">{{"component.calc.results.liters" | translate}}</md-option>
+			</md-select>
+
+			<md-select ng-model="calc.currencyType" ng-change="calc.calculate()" aria-label="currency type">
+				<md-option value="colones">{{"component.calc.results.colones" | translate}}</md-option>
+				<md-option value="dollars">{{"component.calc.results.dollars" | translate}}</md-option>
+			</md-select>
+		</legend>
+
+		{{"component.calc.results.area_title" | translate}}
+		<h3 ng-switch on="calc.unitsType">
+			<span>{{ calc.area | number:0 }}</span>
+			<small ng-switch-when="feet">{{"component.calc.results.sq_feet" | translate}}</small>
+			<small ng-switch-when="meters">{{"component.calc.results.sq_meters" | translate}}</small>
+		</h3>
+
+		{{"component.calc.results.paint_title" | translate}}
+		<h3 ng-switch on="calc.weightType">
+			<span>{{ calc.paint | number:1 }}</span>
+			<small ng-switch-when="gallons">{{"component.calc.results.gallons" | translate}}</small>
+			<small ng-switch-when="liters">{{"component.calc.results.liters" | translate}}</small>
+		</h3>
+
+		{{"component.calc.results.price_title" | translate}}
+		<h3 ng-switch on="calc.currencyType">
+			<span>{{ calc.cost | number:0 }}</span>
+			<small ng-switch-when="colones">{{"component.calc.results.colones" | translate}}</small>
+			<small ng-switch-when="dollars">{{"component.calc.results.dollars" | translate}}</small>
+		</h3>
+	</fieldset>
+</md-content>
+
+<md-content class="right-side"
+	layout="column" layout-align="start center" 
+	flex-gt-xs="50" flex-order-xs="-1">
+
+	<fieldset class="disclamer">
+		<h2>{{"component.calc.title" | translate}}</h2>
+		
+		<p>{{"component.calc.disclaimer.p" | translate}}</p>
+
+		<p>
+			{{"component.calc.disclaimer.included.title" | translate}}
+			<ul class="styled">
+				<li>{{"component.calc.disclaimer.included.item_1" | translate}}</li>
+				<li>{{"component.calc.disclaimer.included.item_2" | translate}}</li>
+				<li>{{"component.calc.disclaimer.included.item_3" | translate}}</li>
+				<li>{{"component.calc.disclaimer.included.item_4" | translate}}</li>
+			</ul>
+		</p>
+
+		<p>
+			{{"component.calc.disclaimer.not_included.title" | translate}}
+			<ul class="styled">
+				<li>{{"component.calc.disclaimer.not_included.item_1" | translate}}</li>
+				<li>{{"component.calc.disclaimer.not_included.item_2" | translate}}</li>
+				<li>{{"component.calc.disclaimer.not_included.item_3" | translate}}</li>
+			</ul>
+		</p>
+	</fieldset>
+
+</md-content>

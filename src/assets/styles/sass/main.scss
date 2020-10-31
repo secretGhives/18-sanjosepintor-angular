@@ -1,0 +1,142 @@
+@import '../../../assets/styles/sass/variables.scss';
+
+/* ------ The Mixin ------ */
+@mixin typography($font-size){
+	$base-line-height: $font-size * $ratio;
+	$margin: $base-line-height;
+	body{
+		font-size: $font-size;
+		line-height: ($font-size * $ratio);
+	}
+	h1{
+		font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+		line-height: ($font-size * $ratio) * 3;
+		margin-top: $margin * 2;
+		margin-bottom: $margin;
+		color: $navy_hue;
+		letter-spacing: -1.5px;
+	}
+
+	h2{
+		font-size: (($font-size * $ratio) * $ratio);
+		line-height: ($font-size * $ratio) * 2;
+		margin-top: $margin;
+		margin-bottom: $margin;
+		color: $navy_hue;
+	}
+
+	h3{
+		font-size: $font-size * $ratio;
+		line-height: ($font-size * $ratio);
+		margin-top: $margin;
+		margin-bottom: $margin;
+		color: $navy_hue;
+	}
+	h4{
+		font-size: $font-size;
+		line-height: ($font-size * $ratio);
+		margin-top: $margin;
+		margin-bottom: $margin;
+		color: $navy_hue;
+	}
+	p, ul, ol, pre, table, blockquote{
+		margin-top: $margin;
+		margin-bottom: $margin;
+		color: $navy_hue;
+	}
+}
+
+/* ------ The Set Up ------ */
+$ratio: 1.618;
+
+//Step 2) Pick your base font size per breakpoint using the mixin
+//example: @include typography(16px);
+
+//0 - first breakpoint
+//@media (max-width: 299px){@include typography(12px); }
+
+//start of mobile first breakpoints
+@media (min-width: 300px){ @include typography(14px); }
+@media (min-width: 600px){ @include typography(15px); }
+@media (min-width: 800px){ @include typography(16px); }
+@media (min-width: 1000px){ @include typography(17px); }
+@media (min-width: 1200px){ @include typography(18px); }
+@media (min-width: 1400px){ @include typography(18px); }
+@media (min-width: 1600px){ @include typography(18px); }
+
+
+html{
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased !important;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: BrownStd, Helvetica, sans-serif;
+	font-weight: 400;
+	text-rendering: geometricPrecision;
+	position: relative;
+	color: rgb(33,33,33);
+}
+
+ul {
+		padding: 0;
+		// margin: 0;
+	li {
+		list-style: none;
+		font-size: 15px;
+		line-height: 1.65;
+		padding: 0;
+		margin: 0 0 8px 0;
+	}
+
+	&.styled li {
+			width: 280px;
+			margin-bottom: 1em;
+			@media screen and (min-width: 640px) { margin-right: 2em; }
+			position: relative;
+			padding-left: 1.45em;
+
+			&:before {
+				content: '';
+				height: 15px;
+				margin-top: 3px;
+				width: 15px;
+				left: 0;
+				position: absolute;
+				background-image: url(../../../assets/images/checkmark.svg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 100%;
+				display: inline-block
+			}
+	}
+}
+
+.input-submit { 
+	padding: 1em 3em; 
+	font-weight: bold;
+}
+
+@media screen and (min-width: 1100px) {
+	.content-wrapper {
+		max-width: 1080px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+}
+
+/*animate*/  
+.ng-enter {transition: 1s linear all; opacity:0; }
+.ng-enter-stagger {transition-delay: 0.1s; transition-duration: 0s; }
+.ng-enter.ng-enter-active {opacity:1; }
+
+// @media screen and (min-width: 640px) {}
+// @media screen and (max-width: 740px) and (orientation: landscape) {}
+// @media screen and (max-width: 639px) {}
+
+// Add Main SCSS Above

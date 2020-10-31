@@ -1,0 +1,12 @@
+<div class="text" ng-hide="offline">
+	<h3>{{"component.instagram_feed.title" | translate}}</h3>
+	<p>{{"component.instagram_feed.p" | translate}} <a href="{{instagurl}}" target="_blank">feed</a>.</p>
+</div>
+
+<div ng-hide="offline"
+	layout="row" layout-xs="column" layout-align="space-around center" layout-wrap>
+	<figure ng-repeat="instagram in instagrams">
+		<img ng-src="{{instagram.images.low_resolution.url}}" data-large="{{instagram.images.standard_resolution.url}}" class="zoom animate image" />
+		<figcaption>💕 {{instagram.likes.count}}</figcaption>
+	</figure>
+</div>

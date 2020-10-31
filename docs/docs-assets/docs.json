@@ -1,0 +1,388 @@
+{
+  "components": [
+    {
+      "name": "header",
+      "path": "header",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "header component"
+    },
+    {
+      "name": "footer",
+      "path": "footer",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "footer component"
+    },
+    {
+      "name": "book-now",
+      "path": "book-now",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "book-now component"
+    },
+    {
+      "name": "contact-us",
+      "path": "contact-us",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "contact-us component"
+    },
+    {
+      "name": "gallery",
+      "path": "gallery",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "gallery component"
+    },
+    {
+      "name": "commercial",
+      "path": "commercial",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "commercial component"
+    },
+    {
+      "name": "featured-in",
+      "path": "featured-in",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "featured-in component"
+    },
+    {
+      "name": "testimonials",
+      "path": "testimonials",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "testimonials component"
+    },
+    {
+      "name": "steps",
+      "path": "steps",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "steps component"
+    },
+    {
+      "name": "about-intro",
+      "path": "about-intro",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "about-intro component"
+    },
+    {
+      "name": "home-hero",
+      "path": "home-hero",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "home-hero component"
+    },
+    {
+      "name": "moving",
+      "path": "moving",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "moving component"
+    },
+    {
+      "name": "residential-details",
+      "path": "residential-details",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "residential-details component"
+    },
+    {
+      "name": "our-offer",
+      "path": "our-offer",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "our-offer component"
+    },
+    {
+      "name": "commercial-details",
+      "path": "commercial-details",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "commercial-details component"
+    },
+    {
+      "name": "powerwash",
+      "path": "powerwash",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "powerwash component"
+    },
+    {
+      "name": "instagram-feed",
+      "path": "instagram-feed",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "instagram-feed component"
+    },
+    {
+      "name": "interior-steps",
+      "path": "interior-steps",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "interior-steps component"
+    },
+    {
+      "name": "exterior-steps",
+      "path": "exterior-steps",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "exterior-steps component"
+    },
+    {
+      "name": "calculator",
+      "path": "calculator",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "calculator component"
+    },
+    {
+      "name": "calculator",
+      "path": "calculator",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "calculator component"
+    },
+    {
+      "name": "tools-details",
+      "path": "tools-details",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-details component"
+    },
+    {
+      "name": "tools-safety-personal",
+      "path": "tools-safety-personal",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-safety-personal component"
+    },
+    {
+      "name": "tools-safety-floor",
+      "path": "tools-safety-floor",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-safety-floor component"
+    },
+    {
+      "name": "tools-masking",
+      "path": "tools-masking",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-masking component"
+    },
+    {
+      "name": "tools-power-washing",
+      "path": "tools-power-washing",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-power-washing component"
+    },
+    {
+      "name": "tools-power-painting",
+      "path": "tools-power-painting",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-power-painting component"
+    },
+    {
+      "name": "tools-power-accessories",
+      "path": "tools-power-accessories",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-power-accessories component"
+    },
+    {
+      "name": "tools-climbing",
+      "path": "tools-climbing",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-climbing component"
+    },
+    {
+      "name": "tools-onhand",
+      "path": "tools-onhand",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-onhand component"
+    },
+    {
+      "name": "tools-basic",
+      "path": "tools-basic",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-basic component"
+    },
+    {
+      "name": "tools-paint-additives",
+      "path": "tools-paint-additives",
+      "components": [],
+      "directives": [],
+      "services": [],
+      "description": "tools-paint-additives component"
+    }
+  ],
+  "directives": [
+    {
+      "name": "contactForm",
+      "path": "contact-form",
+      "description": "contact-form directive"
+    },
+    {
+      "name": "beforeAfter",
+      "path": "before-after",
+      "description": "before-after directive"
+    },
+    {
+      "name": "affixTop",
+      "path": "affix-top",
+      "description": "affix-top directive"
+    },
+    {
+      "name": "simpleAccordion",
+      "path": "simple-accordion",
+      "description": "simple-accordion directive"
+    },
+    {
+      "name": "zoom",
+      "path": "zoom",
+      "description": "zoom directive"
+    },
+    {
+      "name": "scrollOnClick",
+      "path": "scroll-on-click",
+      "description": "scroll-on-click directive"
+    },
+    {
+      "name": "translateLanguageSelect",
+      "path": "translate-language-select",
+      "description": "translate-language-select directive"
+    },
+    {
+      "name": "hoverShine",
+      "path": "hover-shine",
+      "description": "hover-shine directive"
+    },
+    {
+      "name": "scrollEffect",
+      "path": "scroll-effect",
+      "description": "scroll-effect directive"
+    },
+    {
+      "name": "visible",
+      "path": "visible",
+      "description": "visible directive"
+    },
+    {
+      "name": "toucan",
+      "path": "toucan",
+      "description": "toucan directive"
+    },
+    {
+      "name": "colorDetails",
+      "path": "color-details",
+      "description": "color-details directive"
+    },
+    {
+      "name": "starRating",
+      "path": "star-rating",
+      "description": "star-rating directive"
+    }
+  ],
+  "services": [
+    {
+      "name": "store",
+      "nameCamel": "store",
+      "path": "store",
+      "description": "Store service fetches and holds some application data like arrays for dropdowns and so on."
+    },
+    {
+      "name": "locale",
+      "path": "locale",
+      "description": "locale service"
+    }
+  ],
+  "pages": [
+    {
+      "name": "home",
+      "route": "/home",
+      "state": "home",
+      "description": "home page"
+    },
+    {
+      "name": "residential-painting",
+      "route": "/residential-painting",
+      "state": "residential-painting",
+      "description": "residential-painting page"
+    },
+    {
+      "name": "commercial-painting",
+      "route": "/commercial-painting",
+      "state": "commercial-painting",
+      "description": "commercial-painting page"
+    },
+    {
+      "name": "faq",
+      "route": "/faq",
+      "state": "faq",
+      "description": "faq page"
+    },
+    {
+      "name": "about-us",
+      "route": "/about-us",
+      "state": "about-us",
+      "description": "about-us page"
+    },
+    {
+      "name": "booking",
+      "route": "/booking",
+      "state": "booking",
+      "description": "booking page"
+    },
+    {
+      "name": "tools-store",
+      "route": "/tools-store",
+      "state": "tools-store",
+      "description": "tools-store page"
+    }
+  ],
+  "info": {
+    "appName": "myATApp",
+    "port": 8080
+  }
+}
